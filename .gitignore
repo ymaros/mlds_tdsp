@@ -2,4 +2,5 @@
 *.env
 env_vars*
 credentials*
+flickr8k*
 **/build/*
