@@ -2,37 +2,24 @@
 
 ## Base de datos 1
 
-**Agregar una descripción de la tabla o fuente de datos.
+Esta base de datos contiene información sobre las imágenes y sus respectivas descripciones. Los datos provienen del conjunto de datos Flickr8k.
 
 | Variable | Descripción | Tipo de dato | Rango/Valores posibles | Fuente de datos |
-| --- | --- | --- | --- | --- |
-| variable_1 | Descripción de la variable 1 | Tipo de dato | Rango/Valores posibles | Fuente de datos |
-| variable_2 | Descripción de la variable 2 | Tipo de dato | Rango/Valores posibles | Fuente de datos |
-| variable_3 | Descripción de la variable 3 | Tipo de dato | Rango/Valores posibles | Fuente de datos |
-| variable_4 | Descripción de la variable 4 | Tipo de dato | Rango/Valores posibles | Fuente de datos |
-| variable_5 | Descripción de la variable 5 | Tipo de dato | Rango/Valores posibles | Fuente de datos |
+| -------- | ----------- | ------------ | ---------------------- | --------------- |
+| ```image_id``` | Identificador único de la imagen | String | ID único por imagen (ej. "1000268201_693b08cb0e.jpg") | ```src/database/flickr8k/Images/``` |
+| ```caption``` | Descripción textual de la imagen | String | Texto libre, con oraciones descriptivas | ```src/database/flickr8k/captions.txt``` |
 
-- **Variable**: nombre de la variable.
-- **Descripción**: breve descripción de la variable.
-- **Tipo de dato**: tipo de dato que contiene la variable.
-- **Rango/Valores posibles**: rango o valores que puede tomar la variable.
-- **Fuente de datos**: fuente de los datos de la variable.
+- ```image_id```: Identificador único de la imagen, utilizado tanto para las imágenes físicas (archivos .jpg) como para asociar las descripciones y características extraídas de cada imagen.
+- ```caption```: Descripción textual que explica lo que ocurre en la imagen. La descripción ha sido preprocesada para facilitar la tarea de análisis y modelado.
 
 ## Base de datos 2
 
-**Agregar una descripción de la tabla o fuente de datos.
+Esta base de datos contiene las descripciones de las imágenes que han sido preprocesadas (tokenización, eliminación de caracteres no deseados, etc.). Los datos provienen de la limpieza del archivo captions.txt.
 
 | Variable | Descripción | Tipo de dato | Rango/Valores posibles | Fuente de datos |
-| --- | --- | --- | --- | --- |
-| variable_1 | Descripción de la variable 1 | Tipo de dato | Rango/Valores posibles | Fuente de datos |
-| variable_2 | Descripción de la variable 2 | Tipo de dato | Rango/Valores posibles | Fuente de datos |
-| variable_3 | Descripción de la variable 3 | Tipo de dato | Rango/Valores posibles | Fuente de datos |
-| variable_4 | Descripción de la variable 4 | Tipo de dato | Rango/Valores posibles | Fuente de datos |
-| variable_5 | Descripción de la variable 5 | Tipo de dato | Rango/Valores posibles | Fuente de datos |
+| -------- | ----------- | ------------ | ---------------------- | --------------- |
+| ```image_id``` | Identificador único de la imagen | String | ID único por imagen (ej. "1000268201_693b08cb0e.jpg") | ```src/database/flickr8k/Images/``` |
+| ```caption``` | Descripción limpia y procesada de la imagen | String | Texto libre, procesado (sin caracteres no deseados, en minúsculas) | ```src/database/flickr8k/captions_preprocessed.txt``` |
 
-- **Variable**: nombre de la variable.
-- **Descripción**: breve descripción de la variable.
-- **Tipo de dato**: tipo de dato que contiene la variable.
-- **Rango/Valores posibles**: rango o valores que puede tomar la variable.
-- **Fuente de datos**: fuente de los datos de la variable.
-
+- ```image_id```: Identificador único de la imagen, usado como clave para asociar las descripciones limpias con las imágenes correspondientes.
+- ```caption```: Descripción procesada de la imagen. Las descripciones son procesadas para eliminar palabras irrelevantes, normalizar (convertir a minúsculas) y tokenizar las palabras, lo que facilita el análisis en modelos de aprendizaje automático.
