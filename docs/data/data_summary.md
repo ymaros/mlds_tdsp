@@ -15,6 +15,18 @@ En esta sección se presenta un resumen general de los datos del conjunto Flickr
   - caption: Categórica (String).
 - Valores faltantes: El análisis muestra que no existen valores faltantes en las variables clave (image_id, caption, features).
 
+### Visualización de los Datos
+
+A continuación, se presenta ejemplificados los datos a utilizar mencionados anteriormente:
+
+![example_data.png](assets/example_data.png)
+
+### Cantidad de Descrípciones en Promedio por Imagen
+
+La cantidad de descrípciones en promedio es de 5 descripciones por imagen tal y como se muestra en el siguiente grafico.
+
+![example_data.png](assets/graphic_01.png)
+
 ## Resumen de calidad de los datos
 
 En esta sección se presenta un análisis sobre la calidad de los datos, con un enfoque en valores faltantes, valores extremos, errores y duplicados.

@@ -70,13 +70,6 @@ Procedimientos de transformación y limpieza de los datos:
   - Las imágenes se redimensionan o se preprocesan para que puedan ser alimentadas en redes neuronales (esto puede incluir normalización o escalado de píxeles).
   - Los identificadores de imagen se asocian con sus descripciones correspondientes para formar un conjunto de datos adecuado para tareas de generación de texto o clasificación.
 
-### Base de datos de destino
+### Integración con DVC (Data Version Control)
 
-Base de datos de destino para los datos: Los datos procesados, como las características de las imágenes y las descripciones preprocesadas, se guardarán en el siguiente directorio de destino:
-
-Ruta de destino: ```src/database/flickr8k/```
-
-Estructura de la base de datos de destino: En este directorio se almacenarán los siguientes archivos de destino:
-
-- *images_features.json*: Este archivo contiene las características extraídas de las imágenes en formato JSON. Cada entrada en el archivo tiene el nombre de la imagen como clave y las características correspondientes como valores en formato de lista (las matrices ndarray se convierten a listas de Python).
-- *captions_preprocessed.txt*: Este archivo contiene las descripciones de las imágenes después de ser preprocesadas (tokenizadas, limpiadas de caracteres especiales, etc.). Cada línea contiene el identificador de la imagen y la descripción procesada.
+DVC es utilizado para gestionar el ciclo de vida de los datos en el proyecto, permitiendo versionar y realizar un seguimiento de los datos y modelos de manera eficiente. Los scripts y la estructura de carpetas también están organizados para aprovechar DVC en la gestión de los datos.
