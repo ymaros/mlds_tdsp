@@ -161,10 +161,10 @@ print(health_response.json())
 3. Usando la interfaz web
 
    1. Acceder a la documentación interactiva:
-      - Swagger UI: http://localhost:8000/docs
-      - ReDoc: http://localhost:8000/redoc
+      - Swagger UI: ```http://localhost:8000/docs```
+      - ReDoc: ```http://localhost:8000/redoc```
    2. Probar el endpoint desde la interfaz Swagger:
-      - Ir a http://localhost:8000/docs
+      - Ir a ```http://localhost:8000/docs```
       - Clic en POST /generate-caption/
       - Clic en "Try it out"
       - Subir una imagen
@@ -184,7 +184,7 @@ print(health_response.json())
    - Actualizar dependencias periódicamente
    - Mantener versiones compatibles de TensorFlow y FastAPI
 
-3. Troubleshooting común:
+3. Errores comunes:
 
    - Si el modelo no carga: Verificar rutas y permisos de archivos
    - Si hay errores de memoria: Ajustar batch_size o liberar memoria
