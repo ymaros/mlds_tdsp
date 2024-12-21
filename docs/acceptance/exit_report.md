@@ -6,27 +6,44 @@ Este informe describe los resultados del proyecto de machine learning y presenta
 
 ## Resultados del proyecto
 
-- Resumen de los entregables y logros alcanzados en cada etapa del proyecto.
-- Evaluación del modelo final y comparación con el modelo base.
-- Descripción de los resultados y su relevancia para el negocio.
+Como resultado de este proyecto fueron generados múltiples scripts o notebooks de Python que abarcan desde la adquisición de los datos hasta el despliegue del modelo para su uso productivo:
+
+- Notebook para la adquisión de datos del entrenamiento, pruebas y evaluación del modelo en `scripts/data_acquisition`.
+- Notebook para el análisis exploratorio de los datos en `scripts/eda`.
+- Notebook para el preprocesamiento de los datos en `scripts/preprocessing`.
+- Notebook para el entrenamiento del modelo en `scripts/training`.
+- Scripts para la evaluación y despliegue del modelo en `scripts/evaluation`.
+
+En cada una de las etapas se consiguió el objetivo correspondiente de tal forma que al final se obtuvo una nueva versión del modelo base con un rendimiento 33 % mayor en el mejor de los casos.
+
+| Modelo | BLEU-1 | Mejora | BLEU-2 | Mejora |
+|--------|--------|--------|--------|--------|
+| Base | 0.31434 | - | 0.21291 | - |
+| Greedy | 0.327 | + 4 % | 0.201 | - 6 % |
+| Beam Search (K=5) | 0.285 | - 9 %  | 0.285 | + 33 % |
+
+Aunque con un amplio margen para mejorar, el modelo es capaz de entregar descripciones de imágenes textualmente coherentes, por lo que podría ser usado en páginas web o en medios de comunicación que muestren imágenes en contexto.
 
 ## Lecciones aprendidas
 
-- Identificación de los principales desafíos y obstáculos encontrados durante el proyecto.
-- Lecciones aprendidas en relación al manejo de los datos, el modelamiento y la implementación del modelo.
-- Recomendaciones para futuros proyectos de machine learning.
+Como principal desafío se identificó el limitado tamaño del conjunto de datos del que se disponía para realizar el entrenamiento del modelo, además de que únicamente estaba disponible una descripción por imagen. El conjunto solo contaba con 8000 imágenes con su respectiva descripción, cuando es posible encontrar conjuntos que tienen múltiples descripciones para la misma imagen, lo que limitó la variedad de los datos de entrada del modelo.
+
+Como lecciones aprendidas quedó que, aunque el modelo base tiene un rendimiento significativo, la mejoría de este implica una gran cantidad de datos y un amplio tiempo de entrenamiento, por lo que se debe evaluar el costo de obtener estos datos y entrenar el modelo contra el de dedicar a una persona a realizar esta tarea.
 
 ## Impacto del proyecto
 
-- Descripción del impacto del modelo en el negocio o en la industria.
-- Identificación de las áreas de mejora y oportunidades de desarrollo futuras.
+El modelo es capaz de entregar descripciones textualmente correctas, aunque no tan precisas a la hora de describir la imagen a la que corresponden, por lo que puede usarse en imágenes que hacen parte de un contexto como en sitios web o en medios de comunicación.
+
+En futuras implementaciones del modelo, mediante un conjunto de datos mayor y más variado, se espera que el rendimiento de este mejore lo suficiente como para ser implementado en otras áreas.
 
 ## Conclusiones
 
-- Resumen de los resultados y principales logros del proyecto.
-- Conclusiones finales y recomendaciones para futuros proyectos.
+Dependiento de la estrategia y de la métrica se obtuvo una mejoría o un empeoramiento en el rendimiento del modelo. Sin embargo, para la estrategia Beam Search se obtuvo una mejoría total del 24 %, alcanzado un conjunto de datos relativamente pequeño y limitado.
+
+Es este sentido, resulta intuitivo pensar que un conjuntos de datos más grande y variado, con un tiempo de entrenamiento mejor podría representar una ganancia en todas las métricas.
 
 ## Agradecimientos
 
-- Agradecimientos al equipo de trabajo y a los colaboradores que hicieron posible este proyecto.
-- Agradecimientos especiales a los patrocinadores y financiadores del proyecto.
+Agradecimientos a los integrantes del grupo por su esfuerzo, semana a semana, en este proyecto.
+
+Agradecimientos a la empresa por financiar el proyecto.
