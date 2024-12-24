@@ -26,7 +26,7 @@ Aunque con un amplio margen para mejorar, el modelo es capaz de entregar descrip
 
 ## Lecciones aprendidas
 
-Como principal desafío se identificó el limitado tamaño del conjunto de datos del que se disponía para realizar el entrenamiento del modelo, además de que únicamente estaba disponible una descripción por imagen. El conjunto solo contaba con 8000 imágenes con su respectiva descripción, cuando es posible encontrar conjuntos que tienen múltiples descripciones para la misma imagen, lo que limitó la variedad de los datos de entrada del modelo.
+Como principal desafío se identificó el limitado tamaño del conjunto de datos del que se disponía para realizar el entrenamiento del modelo. El conjunto solo contaba con 8000 imágenes con 5 descripciones de cada una, lo que limitó la variedad de los datos de entrada del modelo.
 
 Como lecciones aprendidas quedó que, aunque el modelo base tiene un rendimiento significativo, la mejoría de este implica una gran cantidad de datos y un amplio tiempo de entrenamiento, por lo que se debe evaluar el costo de obtener estos datos y entrenar el modelo contra el de dedicar a una persona a realizar esta tarea.
 
@@ -38,9 +38,9 @@ En futuras implementaciones del modelo, mediante un conjunto de datos mayor y m�
 
 ## Conclusiones
 
-Dependiento de la estrategia y de la métrica se obtuvo una mejoría o un empeoramiento en el rendimiento del modelo. Sin embargo, para la estrategia Beam Search se obtuvo una mejoría total del 24 %, alcanzado un conjunto de datos relativamente pequeño y limitado.
+Dependiento de la estrategia y de la métrica se obtuvo una mejoría o un empeoramiento en el rendimiento del modelo. Sin embargo, para la estrategia Beam Search se obtuvo una mejoría total del 24 %, alcanzado con un conjunto de datos relativamente pequeño y limitado.
 
-Es este sentido, resulta intuitivo pensar que un conjuntos de datos más grande y variado, con un tiempo de entrenamiento mejor podría representar una ganancia en todas las métricas.
+En este sentido, resulta intuitivo pensar que un conjunto de datos más grande y variado, y con un tiempo de entrenamiento mayor, se podría obtener una ganancia en todas las métricas.
 
 ## Agradecimientos
 
